@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racha-Conta & Gorjetas</title>
+    <link rel="stylesheet" href="atividade04.css">
+</head>
+<body>
+    <main class="calculator-card">
+        <h2>Racha-Conta </h2>
+
+        <div class="input-group">
+            <label for="bill">Valor Total da Conta (R$)</label>
+            <input type="number" id="bill" placeholder="0.00" step="0.01" min="0">
+        </div>
+        <div class="input-group">
+            <label> Porcentagem da Gorjeta</label>
+            <div class="tip-buttons">
+                <button class="tip-btn" data-tip="5">5%</button>
+                <button class="tip-btn active" data-tip="10">10%</button>
+                <button class="tip-btn" data-tip="15">15%</button>
+                <button class="tip-btn" data-tip="20">20%</button>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="people">Número de pessoas</label>
+            <input type="number" id="people" value="1" min="1">
+        </div>
+
+        <div class="results">
+            <div class="result-row">
+                <span>Total da Gorjeta</span>
+                <strong id="tip-amount">R$ 0,00</strong>
+            </div>
+            <div class="result-row total">
+                <span>Total por Pessoa</span>
+                <strong id="total-per-person">R$ 0,00</strong>
+            </div>
+        </div>
+    </main>
+    <script src="atividade04.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+:root{
+    --bg-color:#08040c;
+    --card-bg:#12091f;
+    --neon-purple:#c084fc;
+    --neon-glow:#a855f7;
+    --text-primary:#f3e8ff;
+    --text-muted:#9333ea;
+    --border-neon:#7e22ce;
+    --btn-active:#faf5ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.stopwatch-card{
+    background-color: var(--card-bg);
+    padding: 30px;
+    box-shadow:0 0 20px rgba(168, 85, 247, 0.3), inset 0 0 15px rgba(168, 85, 247, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid var(--border-neon);
+    clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
+}
+h2{
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--neon-purple);
+    text-shadow: 0 0 8px var(--neon-glow);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.time-display{
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20 var(--neon-glow);
+    background-color: #000000;
+    padding: 20px 10px;
+    text-align: center;
+    border: 1px solid var(--neon-purple);
+    margin-bottom: 25px;
+    letter-spacing: 25px;
+}
+.controls{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.btn{
+    flex: 1;
+    padding: 12px 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--neon-purple);
+    background-color: transparent;
+    border: 1px solid var(--neon-purple);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn:hover:not(:disabled){
+    background-color: var(--neon-purple);
+    color: #000000;
+    box-shadow: 0 0 12px var (var(--neon-glow));
+}
+.btn.primary{
+    border-color: #ef4444;
+    color: #ef4444;
+}
+.btn.primary:hover:not(:disabled){
+    background-color: #ef4444;
+    color: #ffffff;
+    box-shadow: 0 0 12px #ef4444;
+}
+.btn:disabled{
+    border-color: #3b0764;
+    color: #581c87;
+    cursor: not-allowed;
+}
+.laps-container{
+    border-top: 1px dashed var(--border-neon);
+    padding-top: 15px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+.laps-container h3{
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+#laps-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+#laps-list li{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    border-left: 3px solid var(--neon-purple);
+    color: var(--text-primary);
+}
+#laps-list li strong{
+    color: var(--neon-purple);
+}
